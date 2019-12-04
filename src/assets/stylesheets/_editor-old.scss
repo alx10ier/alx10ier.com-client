@@ -1,0 +1,206 @@
+.CodeMirror {
+  height: 100% !important;
+  line-height: 1.5rem !important;
+  overflow: scroll;
+  font-size: 1rem;
+}
+
+.CodeMirror-line {
+  padding: 0 0.5rem !important;
+}
+
+.CodeMirror-activeline-background {
+  background-color: #f6fafc !important;
+}
+
+.CodeMirror-activeline-gutter {
+  background-color: #e0e5ec;
+}
+
+.CodeMirror-activeline-gutter .CodeMirror-linenumber {
+  color: white !important;
+}
+
+.CodeMirror-linenumber {
+  padding-left: 0.5rem !important;
+}
+
+.editor {
+  height: 100%;
+  border-right: 0.5rem solid #f4f4f4;
+}
+
+@media screen and (max-width: 767px) {
+  .editor, .setting {
+    border: none;
+    border-bottom: 1px solid #272727;
+  }
+}
+
+.preview {
+  height: 100%;
+  overflow: scroll;
+}
+
+.preview, .article {
+  line-height: 2rem;
+  padding: 2rem 3rem;
+  font-family: "Raleway", 'PingFang SC', sans-serif;
+  pre {
+    border-radius: 5px;
+    background: #eff0f1;
+    padding: 1rem 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Ubuntu Mono', 'PingFang SC', monospace;
+    line-height: 1.5rem;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    code {
+      font-family: inherit;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -o-pre-wrap;
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    margin-bottom: 1rem;
+    li::before {
+      content: "-";
+      color: #DAA520;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    margin-bottom: 1rem;
+    li::before {
+      content: counter(item) ".";
+      counter-increment: item;
+      color: #DAA520;
+      font-weight: 700;
+      margin-right: 0.5rem;
+      font-family: "Ubuntu Mono", monospace;
+    }
+  }
+
+  li {
+    display: flex;
+    list-style-type: none;
+    list-style-position: inside;
+    margin-bottom: 0.25rem;
+    input {
+      height: 2rem;
+      width: 1.5rem;
+    }
+  }
+
+  .task-list-item::before {
+    content: '';
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: "Poiret One", 'PingFang SC', cursive;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    &::before{
+      content: "＊";
+      color: #DAA520;
+      font-weight: 700;
+      position: absolute;
+      top: 0;
+      left: -1.2em;
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .information > * {
+    display: inline-block;
+    line-height: 1rem;
+    font-weight: bold;
+  }
+
+  .time {
+    margin-bottom: 2rem;
+  }
+
+  .author {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 3px solid #DAA520;
+  }
+}
+
+.setting {
+  flex: 0 0 1;
+  display: none;
+  transition: 0.5s;
+  padding: 3rem 0;
+  background: #f4f4f4;
+  overflow: scroll;
+  legend {
+    padding: 0;
+  }
+  fieldset {
+    border: none;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type=submit] {
+    border: none;
+    background: none;
+    color: #45516e;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .default {
+    line-height: 2rem;
+    width: 10rem;
+  }
+  .custom {
+    padding: 0 0.5rem;
+    height: 2rem;
+    width: 10rem;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.setting-toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  border-left: 2px solid #f4f4f4;
+  border-top: 2px solid #f4f4f4;
+  border-bottom: 2px solid #f4f4f4;
+  border-radius: 5px;
+}
