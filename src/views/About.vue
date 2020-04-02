@@ -1,5 +1,14 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <pi-editor/>
   </div>
 </template>
+
+<script>
+import PiEditor from '@/components/pilxe/editor.vue'
+export default {
+  components: {
+    PiEditor
+  }
+}
+</script>

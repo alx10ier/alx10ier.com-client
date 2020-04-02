@@ -1,0 +1,48 @@
+$max-grid: 12;
+
+// @media screen and (min-width: 768px) {
+//   .columns:not(.desktop) {
+//     display: flex;
+//     flex-direction: row;
+//   }
+// }
+//
+// .mobile {
+//   display: flex;
+//   flex-direction: row;
+// }
+
+.columns {
+  display: flex;
+  flex-direction: row;
+}
+
+@for $i from 1 through $max-grid {
+  .col-#{$i} {
+    width: percentage($i / $max-grid);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  @for $i from 1 through $max-grid {
+    .col-#{$i}-mobile {
+      width: percentage($i / $max-grid);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $i from 1 through $max-grid {
+    .col-#{$i}-tablet {
+      width: percentage($i / $max-grid);
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  @for $i from 1 through $max-grid {
+    .col-#{$i}-desktop {
+      width: percentage($i / $max-grid);
+    }
+  }
+}

@@ -1,54 +1,17 @@
 .navbar {
-  @extend .columns;
-  width: 100%;
-  padding: 0.5rem 3rem;
-  border-bottom: 0 solid #f4f4f4;
-  .navbar-brand {
-    @extend .columns;
-    align-items: center;
-    font-family: "Poiret One", 'PingFang SC', cursive;
-  }
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #f4f4f4;
   .navbar-menu {
-    @extend .columns;
-    align-items: center;
-    justify-content: center;
-    .navbar-item {
-      font-weight: bold;
-      display: inline-block;
-      padding: 0 1rem;
+    .navbar-item:hover {
+      background-color: #fafafa;
     }
-  }
-  .navbar-menu-wide {
-    .navbar-item {
-      padding: 0 2.5rem;
-      &:not(:first-child) {
-        border-left: 1px solid #DAA520;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navbar {
-    padding: 0.5rem 0;
-  }
-}
-
-.curtain .navbar {
-  height: 4rem;
-  transition: all 0.3s ease;
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 0 0 5px #d3d3d3;
-    transition: all 0.3s ease;
   }
   .navbar-item {
-    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
   }
-}
-
-.navbar.fixed-top {
-  background-color: white;
-  border-bottom: 2px solid #f4f4f4;
 }

@@ -1,12 +1,18 @@
-html,
-body {
-  height: 100%;
-  color: #272727;
-  font-size: 16px;
+html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Raleway", 'PingFang SC', sans-serif;
+  color: $dark;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: $tea;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: $almond;
+  }
 }
 
 h1 {
@@ -31,18 +37,4 @@ h5 {
 
 h6 {
   font-size: 1rem;
-}
-
-a {
-  color: #45516e;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    color: #DAA520;
-  }
-}
-
-main {
-  padding: 4rem 2rem;
 }
