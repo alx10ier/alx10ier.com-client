@@ -18,7 +18,7 @@ export default {
   },
   data () {
     return {
-      res: ""
+      res: "default"
     }
   },
   mounted () {
